@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Sprites;
+using Tracker.WebAPIClient;
+
+
 
 namespace MonoExample2025
 {
@@ -30,6 +33,12 @@ namespace MonoExample2025
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            ActivityAPIClient.Track(
+                StudentID: "S00277340",
+                StudentName: "Celia Bocage",
+                activityName: "DSAA Week 1 Lab 2 Sheet 3 2025",
+                Task: "Starting Week 1 Lab 2");
+
             new InputEngine(this);
             Vector2 currentMouse = InputEngine.MousePosition;
             // Changing the width and height of the _graphics device
